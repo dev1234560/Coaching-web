@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Admin1.css">
+    <script src="https://kit.fontawesome.com/97ebdf5864.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="box">
+        <form action="" autocomplete="off">
+            <h2>LOGIN</h2>
+            <!-- Username -->
+            <div class="inputBox">
+                <input type="text" id="Username"  required>
+                <span>Username</span>
+                <i></i>
+            </div>
+            <!-- Password -->
+            <div class="inputBox">
+                <input type="password" id="password" required>
+                <!-- <span class="password-toggle-icon"><i class="fas fa-eye"></i></span> -->
+                <span>Password</span>
+                <i></i>
+
+            </div>
+            <!-- Login BUtton -->
+            <input type="submit"  onClick="auth(event)" value="Login" class="Login">
+        </form>
+    </div>
+
+    <script>
+
+       
+       
+            function auth(event) {
+          event.preventDefault();
+
+          var Username = document.getElementById("Username").value;
+          var password = document.getElementById("password").value;
+
+          if (Username === "admin@gmail.com" && password === "user") {
+               window.location.replace("/Dashboard.html");
+          }       
+             
+          else {
+              alert("Invalid information");
+              return;
+          }
+        }
+    
+
+
+    </script>
+</body>
+</html>

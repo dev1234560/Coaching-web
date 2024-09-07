@@ -1,0 +1,41 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Optional: for better visibility */
+}
+
+.iframe-container {
+    width: 95%;
+    max-width: 1000px; /* Max width for the iframe */
+    height: 100%; /* Set height to 100% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.iframe-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.overlay {
+    position: fixed; /* Fixed overlay for blocking interactions */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Height of the overlay, adjust as needed */
+    background-color: rgba(0, 0, 0, 0); /* Transparent overlay */
+    z-index: 10; /* Ensure the overlay is on top */
+    /* pointer-events: none;   */
+    /* Allows scrolling underneath */
+}
+
+@media only screen and (max-width: 600px) {
+    iframe {
+        zoom: 1.5; /* Increase zoom for smaller screens */
+    }
+}
